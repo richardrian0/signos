@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+
+<main>
+    <h1> Zodiáco </h1>
+
+    <input type="search" list="list" placeholder="Escolha o Signo..." id="signos">
+
+    <datalist id="list">
+      <option value="Áries"> </option> 
+      <option value="Touro"> </option> 
+      <option value="Gêmeos"> </option> 
+      <option value="Câncer"> </option> 
+      <option value="Leão"> </option> 
+      <option value="Virgem"> </option> 
+      <option value="Libra"> </option> 
+      <option value="Escorpião"> </option>
+      <option value="Sagitário"> </option>
+      <option value="Capricórnio"> </option>
+      <option value="Aquário"> </option>
+      <option value="Peixes"> </option>
+    
+    </datalist>
+       
+    <button onclick="escolhaSigno()"> Buscar </button>
+
+
+    <div id="frase">A palavra "zodíaco" é usada tanto na Astronomia, quanto na Astrologia para se referir à faixa imaginária do céu sobre a qual o sol, a lua e os planetas se movem - como é vista da Terra, pelo menos. </div>
+
+    <script>
+        function escolhaSigno() {
+            var texto
+            var signo = document.getElementById("signos").value;
+
+            switch (signo) {
+                case "Áries":
+                    texto = "Os mais estressadinho do zodíaco, os arianos são impulsivos, determinados e nada pacientes. ";
+                    break
+
+                case "Touro":
+                    texto = "Tão calmos e apegados, mas pisa no calo deles para ver o que acontece. Não vamos esquecer da fome sem fim que eles têm!";
+                    break
+
+                case "Gêmeos":
+                    texto = "Donos da razão e falantes, com essa junção não dá nem para tentar discutir com eles. ";
+                    break
+
+                case "Libra":
+                    texto = "São sempre requisitados por seus amigos e adoram uma boa conversa. Pessoas de Libra exalam charme e elegância.";
+                    break
+
+                case "Câncer":
+                    texto = " São românticas, sonhadoras, fiéis, cuidadosas e muito dedicadas à família. ";
+                    break
+
+                case "Escorpião":
+                    texto = " São pessoas que exalam mistério e poder, e dificilmente deixam-se acessar por completo.";
+                    break
+
+                case "Peixes":
+                    texto = "São pessoas sensíveis, sonhadoras, empáticas, pacientes, calmas, intuitivas, românticas, generosas, místicas e amáveis. ";
+                    break
+
+                case "Sagitário":
+                    texto = "estão sempre abertas a novas experiências e querendo aprender. Mente aberta e intuitiva, possuem uma personalidade inquieta e mutável.";
+                    break
+
+                case "Virgem":
+                    texto = "costumam ser inteligentes, detalhistas, metódicas, organizadas, discretas e perfeccionistas. ";
+                    break
+
+                case "Capricórnio":
+                    texto = "Capricornianos costumam planejar e traçar seus objetivos e metas. Obstinados não costumam confiar nos planos feitos por outras pessoas, preferem seguir seus próprios planos";
+                    break
+
+                case "Leão":
+                    texto = "Os leoninos são pessoas vaidosas, extrovertidas e muito carismáticas.";
+                    break
+
+                case "Aquario":
+                    texto = " os aquarianos são criativos, inquietos e costumam ir direto ao ponto";
+                    break
+
+
+
+
+
+
+                default:
+                    texto = "insira um signo existente"
+
+
+            }
+
+            document.getElementById("frase").innerHTML = texto
+
+
+
+        }
+
+
+
+
+
+    </script>
+
+
+
+</main>
+
+
+
+</body>
+
+</html>
